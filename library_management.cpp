@@ -267,8 +267,8 @@ void book_issue()
     cout << "\n\nBook Issue..."<< endl;
     cout << "\n\n\tEnter Rollno of Student : ";
     cin >> sn;
-    fp.open("studentdata.dat",ios::out|ios::out);
-    fp1.open("boodata.dat",ios::out|ios::out);
+    fp.open("studentdata.dat",ios::in|ios::out);
+    fp1.open("boodata.dat",ios::in|ios::out);
     while(fp.read((char*)&st,sizeof(Student)) && found == 0)
     {
         if(strcmpi(st.ret_Roll_no(),sn)==0)
